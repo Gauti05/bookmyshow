@@ -1,7 +1,7 @@
 const { default: mongoose } = require("mongoose")
 const MovieModel = require("../Models/movie.model")
 const showModel = require("../Models/show.model")
-const theatreModel = require("../Models/theater.model")
+const theatreModel = require("../Models/Theatre.model")
 
 const createNewShow =async (req,res)=>{
   
