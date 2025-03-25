@@ -1,7 +1,9 @@
 const BookingModel = require('../Models/Booking.Model');
 const showModel = require('../Models/show.model');
 
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEYS)
+
+//STRIPE_SECRET_KEYS
 
 
 const makePayment =async (req,res)=>{

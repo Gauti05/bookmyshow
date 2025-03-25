@@ -45,6 +45,8 @@ const limiter = rateLimit({
 app.use(limiter)
 
 
+
+
 //replace my prohibited character with_
 app.use(
     mongoSantize({
@@ -57,6 +59,8 @@ movieRoute(app)
 TheaterRoutes(app)
 showRoutes(app )
 bookingRoutes(app)
+
+console.log(__dirname)
 
 app.listen(process.env.PORT,()=>{
 
