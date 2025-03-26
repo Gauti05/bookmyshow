@@ -31,18 +31,18 @@ mongoose.connect(process.env.DB_URL)
 
 
 // create a rate limiter
-const limiter = rateLimit({
-    windowsMs:5*1000,
-    max:2,
-    message:{
-        status:429,
-        error:"too many request",
-        message:"You have exceeded the request limit. please try again later"
-    }
-})
+// const limiter = rateLimit({
+//     windowsMs:5*1000,
+//     max:2,
+//     message:{
+//         status:429,
+//         error:"too many request",
+//         message:"You have exceeded the request limit. please try again later"
+//     }
+// })
 
 // apply the rate limiter to all the request
-app.use(limiter)
+// app.use(limiter)
 
 
 
