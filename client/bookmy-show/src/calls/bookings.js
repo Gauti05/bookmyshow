@@ -2,7 +2,7 @@ import axiosInstance from ".";
 
 export async function MakePayment(data){
     try{
-        const response =  await axiosInstance.post("https://bookmyshow-1-rq9t.onrender.com/payment", {
+        const response =  await axiosInstance.post("https://bookmyshow-1-rq9t.onrender.com:/payment", {
             token:data.token.id,
             amount:data.amount
            
