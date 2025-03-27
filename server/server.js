@@ -6,6 +6,7 @@ const movieRoute = require('./src/ROUTES/movies.routes')
 var bodyParser = require('body-parser')
 const rateLimit = require('express-rate-limit')
 const mongoSantize = require('express-mongo-sanitize')
+const path = require("path")
 // const cors = require('cors')
 require('dotenv').config()
 const TheaterRoutes = require('./src/ROUTES/Theater.routes')
@@ -20,6 +21,8 @@ app.use(bodyParser.json())
 
 // app.use(cors({ origin : '*'}))
 
+const clientBuildPath = path.join(__dirname,"../client/build")
+app.use(express.static(clientBuildPath))
 
 mongoose.connect(process.env.DB_URL)
 .then(()=>{
