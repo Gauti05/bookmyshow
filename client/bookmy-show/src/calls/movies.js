@@ -2,7 +2,7 @@ import axiosInstance from ".";
 
 export async function GetAllMovies(){
     try{
-        const response =  await axiosInstance.get("https://bookmyshow-1-rq9t.onrender.com/movies")
+        const response =  await axiosInstance.get("http://localhost:8000/movies")
         return response
         // console.log(response)
     }
@@ -18,7 +18,7 @@ return err.response
 
 export async function GetAllMovieById(id){
     try{
-        const response =  await axiosInstance.get(`https://bookmyshow-1-rq9t.onrender.com/movies/${id}`)
+        const response =  await axiosInstance.get(`http://localhost:8000/movies/${id}`)
         return response
         // console.log(response)
     }
