@@ -14,10 +14,10 @@ const showRoutes = require('./src/ROUTES/show.routes')
 
 const cors = require('cors');
 const bookingRoutes = require('./src/ROUTES/booking.routes')
-app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
+// app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
 
 app.use(bodyParser.json())
-// app.use(cors())
+app.use(cors())
 
 // app.use(cors({ origin : '*'}))
 
