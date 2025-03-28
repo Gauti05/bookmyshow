@@ -21,8 +21,6 @@ app.use(bodyParser.json())
 
 // app.use(cors({ origin : '*'}))
 
-const clientBuildPath = path.join(__dirname,"../client/build")
-app.use(express.static(clientBuildPath))
 
 mongoose.connect(process.env.DB_URL)
 .then(()=>{
@@ -31,7 +29,6 @@ mongoose.connect(process.env.DB_URL)
 .catch((err) =>{
     console.log("unable to connect db", err)
 })
-
 
 // create a rate limiter
 // const limiter = rateLimit({
@@ -63,7 +60,15 @@ TheaterRoutes(app)
 showRoutes(app )
 bookingRoutes(app)
 
-console.log(__dirname)
+
+
+const clientBuildPath = path.join(__dirname,"../client/bookmy-show/build")
+app.use(express.static(clientBuildPath))
+// app.get("*", (req, res) =>
+//     res.sendFile(path.join(_dirname, "/client/bookmy-show/build/index.html"))
+//   );
+
+// console.log(__dirname)
 
 app.listen(process.env.PORT,()=>{
 
