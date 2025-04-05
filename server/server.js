@@ -62,11 +62,11 @@ bookingRoutes(app)
 
 
 
-const clientBuildPath = path.join(__dirname,"../client/bookmy-show/build")
-app.use(express.static(clientBuildPath))
-app.get("*", (req, res) =>
-    res.sendFile(path.join(_dirname, "/client/bookmy-show/build/index.html"))
-  );
+// const clientBuildPath = path.join(__dirname,"../client/bookmy-show/build")
+// app.use(express.static(clientBuildPath))
+// app.get("*", (req, res) =>
+//     res.sendFile(path.join(_dirname, "/client/bookmy-show/build/index.html"))
+//   );
 
 // console.log(__dirname)
 
