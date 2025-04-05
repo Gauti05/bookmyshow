@@ -62,21 +62,21 @@ bookingRoutes(app)
 
 
 
-// const clientBuildPath = path.join(__dirname,"../client/bookmy-show/build")
-// app.use(express.static(clientBuildPath))
-// app.get("*", (req, res) =>
-//     res.sendFile(path.join(_dirname, "/client/bookmy-show/build/index.html"))
-//   );
+const clientBuildPath = path.join(__dirname,"../client/bookmy-show/build")
+app.use(express.static(clientBuildPath))
+app.get("*", (req, res) =>
+    res.sendFile(path.join(_dirname, "/client/bookmy-show/build/index.html"))
+  );
 
-// console.log(__dirname)
+console.log(__dirname)
 
-// app.listen(process.env.PORT,()=>{
+app.listen(process.env.PORT,()=>{
 
-//     console.log("server is running on port 8000")
-// })
+    console.log("server is running on port 8000")
+})
 
 
 
-app.listen(process.env.PORT, '0.0.0.0', () => {
-    console.log(`Server running on http://0.0.0.0:${process.env.PORT}`);
-});
+// app.listen(process.env.PORT, '0.0.0.0', () => {
+//     console.log(`Server running on http://0.0.0.0:${process.env.PORT}`);
+// });

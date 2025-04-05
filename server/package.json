@@ -6,7 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js",
     "dev": "nodemon server.js",
-    "build": " npm install && cd ../client/bookmy-show && npm install && npm run build"
+"build": " npm install && cd ../client/bookmy-show && npm install && npm run build"
+    
   },
   "keywords": [],
   "author": "",
@@ -28,3 +29,6 @@
     "stripe": "^17.7.0"
   }
 }
+
+
+
