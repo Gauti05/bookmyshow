@@ -8,5 +8,3 @@ module.exports = (app)=>{
 }
 
 
-//
-//// "build": " npm install && cd ../client/bookmy-show && npm install && npm run build"

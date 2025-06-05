@@ -2,7 +2,7 @@ import axiosInstance from ".";
 
 export async function RegisterUser(data){
     try{
-        const response =  await axiosInstance.post("https://bookmyshow-3-38cj.onrender.com/register", {
+        const response =  await axiosInstance.post("http://localhost:8000/register", {
             name:data.name,
             email:data.email,
             password:data.password
@@ -18,7 +18,7 @@ return err.response
 
 export async function LoginUser(data) {
     try{
-        const response =  await axiosInstance.post("https://bookmyshow-3-38cj.onrender.com/login", {
+        const response =  await axiosInstance.post("http://localhost:8000login", {
           
             email:data.email,
             password:data.password
