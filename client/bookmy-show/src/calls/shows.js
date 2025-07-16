@@ -2,7 +2,7 @@ import axiosInstance from ".";
 
 export async function GetShowsForMovie(movieId, date){
     try{
-        const response =  await axiosInstance.get(`https://bookmyshow-2-kw91.onrender.com/${movieId}/shows?date=${date}`)
+        const response =  await axiosInstance.get(`https://bookmyshow-2-kw91.onrender.com/movies/${movieId}/shows?date=${date}`)
         return response
         // console.log(response)
     }
